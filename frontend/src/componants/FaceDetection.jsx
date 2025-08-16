@@ -45,9 +45,10 @@ const FaceDetection = () => {
         const mood = sorted[0][0];
         setExpression(mood);
         console.log("Detected expressions:", detection.expressions);
-
         // 👇 YAHI PAR BACKEND SE SONGS LAO
-        const res = await fetch(`http://localhost:3000/songs?mood=${mood}`);
+        const res = await fetch(
+          `${import.meta.env.VITE_BASEURL}/songs?mood=${mood}`
+        );
         const data = await res.json();
         console.log("Songs fetched:", data.songs);
         setSongs(data.songs); // save in state
