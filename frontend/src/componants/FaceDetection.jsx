@@ -104,7 +104,7 @@ const FaceDetection = () => {
               muted
               width="100%"
               height="250"
-              className="lg:w-[35%] rounded-lg shadow border"
+              className="lg:w-[35%] rounded-lg shadow-lg border-2 border-gray-300"
             />
 
             <div className="flex-1 flex flex-col gap-5">
